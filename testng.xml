@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sample Test Suite" parallel="tests" thread-count="2">
+
+<test name="FirstTest">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="86.0"/>
+    <classes>
+          <class name="grumpy.GrumpyTest"/>
+      </classes>
+</test>
+    <test name="SecondTest">
+        <parameter name="browserName" value="firefox"/>
+        <parameter name="browserVersion" value="82.0"/>
+        <classes>
+            <class name="grumpy.GrumpyTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,87 @@
+/* FORMS */
+
+textarea, input[type=text], button { font: inherit; outline: none; color: inherit; }
+
+.input { height: 32px; }
+.input { position: relative; border: 0px solid #d5d1c9; }
+.input:before { border-top: 1px solid #808080; border-right: 1px solid #D5D1C9; border-bottom: 1px solid #E5E1D9; border-left: 1px solid #808080; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0; }
+.input:after { border-top: 1px solid #3d3d3d; border-right: 1px solid #D5D1C9; border-bottom: 1px solid #E5E1D9; border-left: 1px solid #3d3d3d; content: ''; position: absolute; top: 1px; right: 1px; bottom: 1px; left: 1px; z-index: 1; background: #FFF; }
+.input.disabled:after { background: #f5f5f0; }
+.input > textarea,
+.input > input[type=text] { min-width: 100px; padding: 6px 6px 4px; background: transparent; border: none; height: 100%; width: 100%; margin: 0; position: absolute; z-index: 2; }
+
+button { border: none; padding: 0; }
+
+.btn { padding: 6px 30px 5px; background: #D5D1C9; color: black; position: relative; border: 1px solid #000; }
+.btn:before { border-top: 1px solid #FFF; border-left: 1px solid #FFF; border-right: 1px solid #3d3d3d; border-bottom: 1px solid #3d3d3d; content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.btn:after { border-top: 1px solid #D5D1C9; border-left: 1px solid #D5D1C9; border-right: 1px solid #808080; border-bottom: 1px solid #808080; content: ''; position: absolute; top: 1px; right: 1px; bottom: 1px; left: 1px; }
+.btn:not([disabled]):active { padding: 7px 29px 4px 31px; }
+.btn:not([disabled]):active:before, .btn:not([disabled]):active:after { border: none; }
+
+.btn[disabled] { color: #808080; text-shadow: 1px 1px 0 #FFF; border-color: #FFF; }
+
+button.inline { background: none; color: #00F; border-bottom: 1px dotted #00F; cursor: pointer; }
+button.inline:active { position: relative; top: 1px; }
+
+/* EDIT POST */
+
+.upload,
+.dragging { background: #f5f5f0; color: #3d3d3d; display: flex; justify-content: center; align-items: center; }
+
+.upload { height: 75px; position: relative; }
+.upload > .corner { position: absolute; width: 12px; height: 12px; border-width: 3px; border-color: #808080; border-style: solid; }
+.upload > .top-left { top: 0; left: 0; border-bottom: none; border-right: none; }
+.upload > .top-right { top: 0; right: 0; border-left: none; border-bottom: none; }
+.upload > .bottom-left { bottom: 0; left: 0; border-right: none; border-top: none; }
+.upload > .bottom-right { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+.dragging { border: 4px dashed #D5D1C9; position: absolute; top: 0; right: 0; bottom: 0px; left: 0; z-index: 3; }
+.dragover { border-color: #808070; color: #3d3d3d; }
+
+.media { position: relative; }
+.media-wrap { width: max-content; position: relative; }
+.media-wrap > img { display: block; max-width: 550px; max-height: 500px; }
+.media-delete { width: 32px; height: 32px; background-image: url(/static/editor/delete.svg); position: absolute; right: -46px; top: 0; }
+.media-delete:hover { background-position: -100% 0; }
+
+.upload-overlay { position: absolute; right: 0; left: 0; bottom: 0; background: #FFFFFF; }
+.failed-overlay { position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: #CC3333DD; }
+.deleting-overlay { position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: #FFFFFF99; }
+  
+.status { background-color: #FFE5E5; color: #c33; padding: 4px 10px; }
+
+.textarea { position: relative; }
+.textarea > .input { height: 300px; }
+.textarea > .input > textarea { resize: none; }
+.textarea > .input > textarea::placeholder { color: #AAA; opacity: 1; }
+.textarea > .handle { position: absolute; left: calc(50% - 5px); }
+.textarea > .handle > .rope { width: 2px; height: 35px; background: #808070; margin: 0; }
+.textarea > .handle > .ring { width: 10px; height: 10px; border-radius: 50%; border: 2px solid #808070; cursor: pointer; }
+
+.post-post { padding: 0; height: 78px; font-weight: bold; background-color: #C64A42; color: white; position: relative; }
+.post-post:not([disabled]) { border-bottom: 4px solid #961A12; }
+.post-post[disabled] { height: 74px; margin-top: 4px; filter: grayscale(); }
+.post-post:not([disabled]):active { border-bottom: none; height: 74px; margin-top: 4px; }
+.post-post > .hand { position: absolute; left: 0; bottom: 22px; }
+.post-post:not([disabled]):hover > .hand { transform: translateY(-12px); }
+.post-post:not([disabled]):active > .hand { transform: translateY(15px); }
+.post-post > .button { position: absolute; left: 28px; bottom: 0; }
+.post-post > .label { margin: 0 24px 0 103px; font-size: 36px; line-height: 36px; align-self: center; letter-spacing: 1px; }
+
+.post-post-loader { width: 222px; height: 78px; }
+.post-post-loader > .loader { margin: 0; }
+
+.post-btn-loader { /* same as btn */ padding: 6px 30px 5px;  position: relative; color: transparent; }
+.post-btn-loader > .loader { margin: 0; position: absolute; top: calc(50% - 19px); left: calc(50% - 19px); } /* .loader width / 2 */
+
+
+@media (prefers-color-scheme: dark) {
+  .upload, .dragging { background-color: #363A3A; color: #999; }
+  .dragging { border-color: #808070; } 
+  .dragover { border-color: #D5D1C9; }
+  .input:before { display: none; }
+  .input:after { background-color: #363A3A; border-top-color: #1d1d1d; border-left-color: #1d1d1d; border-right-color: #999; border-bottom-color: #999; }
+  .upload-overlay { background-color: var(--body-bg); }
+  .deleting-overlay { background-color: rgba(0,0,0,0.55); }
+  .btn { border: none; }
+}

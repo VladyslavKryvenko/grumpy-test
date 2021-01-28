@@ -1,0 +1,3 @@
+#!/bin/bash -ex
+
+rsync -rt grumpy:grumpy_data/posts grumpy_data/
