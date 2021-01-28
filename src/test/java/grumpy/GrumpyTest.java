@@ -32,12 +32,12 @@ public class GrumpyTest extends BaseTest {
     new Helpers().shouldHaveDelete();
   }
 
-//  @Test
-//  public void deleteDraft() {
-//    mainPage.open();
-//    mainPage.addPost();
-//    post.deleteDraft(text);
-//    new Helpers().shouldHaveDelete();
-//  }
+  @Test
+  public void deleteDraft() {
+    mainPage.open();
+    mainPage.addPost();
+    post.deleteDraft(text);
+    new Helpers().shouldHaveDelete();
+  }
 
 }
