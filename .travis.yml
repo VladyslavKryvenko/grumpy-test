@@ -4,7 +4,7 @@ sudo: required
 
 services:
   - docker
-  -
+
 networks:
   default:
     driver: bridge
