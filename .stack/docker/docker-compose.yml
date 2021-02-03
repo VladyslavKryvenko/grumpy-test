@@ -39,77 +39,77 @@ services:
       - "8181:8181"
     command: --selenoid-uri http://selenoid:4444 --listen 0.0.0.0:8181
 
-  firefox_82.0:
-    image: "selenoid/vnc:firefox_82.0"
-    container_name: firefox_82.0
-    links:
-      - selenoid
-      - selenoid-ui
-    depends_on:
-      - selenoid
-      - selenoid-ui
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
-  chrome_86.0:
-    image: "selenoid/vnc:chrome_86.0"
-    container_name: chrome_86.0
-    links:
-      - selenoid
-      - selenoid-ui
-    depends_on:
-      - selenoid
-      - selenoid-ui
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
-  opera_72.0:
-    image: "selenoid/vnc:opera_72.0"
-    container_name: opera_72.0
-    links:
-      - selenoid
-      - selenoid-ui
-    depends_on:
-      - selenoid
-      - selenoid-ui
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
-  MicrosoftEdge_88.0:
-    image: "browsers/edge:88.0"
-    container_name: edge_88.0
-    links:
-      - selenoid
-      - selenoid-ui
-    depends_on:
-      - selenoid
-      - selenoid-ui
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
-  safari_13.0:
-    image: "browsers/safari:13.0"
-    container_name: safari_13.0
-    links:
-      - selenoid
-      - selenoid-ui
-    depends_on:
-      - selenoid
-      - selenoid-ui
-    networks:
-      - selenoid
-    volumes:
-      - "/dev/shm:/dev/shm"
-
-networks:
-  selenoid:
-    external:
-      name: selenoid
+#  firefox_82.0:
+#    image: "selenoid/vnc:firefox_82.0"
+#    container_name: firefox_82.0
+#    links:
+#      - selenoid
+#      - selenoid-ui
+#    depends_on:
+#      - selenoid
+#      - selenoid-ui
+#    networks:
+#      - selenoid
+#    volumes:
+#      - "/dev/shm:/dev/shm"
+#
+#  chrome_86.0:
+#    image: "selenoid/vnc:chrome_86.0"
+#    container_name: chrome_86.0
+#    links:
+#      - selenoid
+#      - selenoid-ui
+#    depends_on:
+#      - selenoid
+#      - selenoid-ui
+#    networks:
+#      - selenoid
+#    volumes:
+#      - "/dev/shm:/dev/shm"
+#
+#  opera_72.0:
+#    image: "selenoid/vnc:opera_72.0"
+#    container_name: opera_72.0
+#    links:
+#      - selenoid
+#      - selenoid-ui
+#    depends_on:
+#      - selenoid
+#      - selenoid-ui
+#    networks:
+#      - selenoid
+#    volumes:
+#      - "/dev/shm:/dev/shm"
+#
+#  MicrosoftEdge_88.0:
+#    image: "browsers/edge:88.0"
+#    container_name: edge_88.0
+#    links:
+#      - selenoid
+#      - selenoid-ui
+#    depends_on:
+#      - selenoid
+#      - selenoid-ui
+#    networks:
+#      - selenoid
+#    volumes:
+#      - "/dev/shm:/dev/shm"
+#
+#  safari_13.0:
+#    image: "browsers/safari:13.0"
+#    container_name: safari_13.0
+#    links:
+#      - selenoid
+#      - selenoid-ui
+#    depends_on:
+#      - selenoid
+#      - selenoid-ui
+#    networks:
+#      - selenoid
+#    volumes:
+#      - "/dev/shm:/dev/shm"
+#
+#networks:
+#  selenoid:
+#    external:
+#      name: selenoid
