@@ -27,9 +27,9 @@ public class BaseTest {
 //    this.gridUrl = gridUrl;
 //    this.platform = platform;
 //  }
-  @Parameters({"browserVersion", "browserName"})
+  @Parameters({"browserName","browserVersion"})
   @BeforeMethod
-  public void setup(String browserName, String browserVersion) {
+  public void setup(String browserName,String browserVersion) {
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setBrowserName(browserName);
     capabilities.setVersion(browserVersion);

@@ -64,6 +64,22 @@ services:
       - selenoid
     volumes:
       - "/dev/shm:/dev/shm"
+
+  opera_72.0:
+    image: "selenoid/vnc:opera_72.0"
+    container_name: opera_72.0
+    links:
+      - selenoid
+      - selenoid-ui
+    depends_on:
+      - selenoid
+      - selenoid-ui
+    networks:
+      - selenoid
+    volumes:
+      - "/dev/shm:/dev/shm"
+
+
 networks:
     selenoid:
       external:
