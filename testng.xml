@@ -1,21 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Sample Test Suite" parallel="classes" thread-count="2">
 
-<test name="FirstTest">
+<test name="ChromeTest">
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="86.0"/>
     <classes>
           <class name="grumpy.GrumpyTest"/>
       </classes>
 </test>
-    <test name="SecondTest">
+    <test name="FirefoxTest">
         <parameter name="browserName" value="firefox"/>
         <parameter name="browserVersion" value="82.0"/>
         <classes>
             <class name="grumpy.GrumpyTest"/>
         </classes>
     </test>
-    <test name="ThirdTest">
+    <test name="OperaTest">
         <parameter name="browserName" value="opera"/>
         <parameter name="browserVersion" value="72.0"/>
         <classes>

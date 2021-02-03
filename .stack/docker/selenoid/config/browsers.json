@@ -6,21 +6,6 @@
         "image": "selenoid/vnc:firefox_82.0",
         "port": "4444",
         "path": "/wd/hub"
-      },
-      "57.0": {
-        "image": "selenoid/vnc:firefox_57.0",
-        "port": "4444",
-        "path": "/wd/hub"
-      },
-      "56.0": {
-        "image": "selenoid/vnc:firefox_56.0",
-        "port": "4444",
-        "path": "/wd/hub"
-      },
-      "55.0": {
-        "image": "selenoid/vnc:firefox_55.0",
-        "port": "4444",
-        "path": "/wd/hub"
       }
     }
   },

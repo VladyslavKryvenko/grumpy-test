@@ -7,13 +7,11 @@ import grumpy.pages.config.BaseTest;
 import org.testng.annotations.Test;
 
 
-
 public class GrumpyTest extends BaseTest {
   Post post = new Post();
   Main mainPage = new Main();
   String text = "I added a new post";
   String newText = "I have corrected the text in the post";
-
 
 
   @Test()
@@ -31,13 +29,4 @@ public class GrumpyTest extends BaseTest {
     post.delete();
     new Helpers().shouldHaveDelete();
   }
-
-//  @Test
-//  public void deleteDraft() {
-//    mainPage.open();
-//    mainPage.addPost();
-//    post.deleteDraft(text);
-//    new Helpers().shouldHaveDelete();
-//  }
-
 }
