@@ -109,7 +109,4 @@ services:
     volumes:
       - "/dev/shm:/dev/shm"
 
-networks:
-  selenoid:
-    external:
-      name: selenoid
+
