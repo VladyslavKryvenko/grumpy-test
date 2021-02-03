@@ -1,0 +1,10 @@
+language: java
+
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker-compose -f .stack/docker/docker-compose.yml up  --build --force-recreate
+  - mvn clean test
