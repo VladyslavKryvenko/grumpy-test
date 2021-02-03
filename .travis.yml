@@ -6,7 +6,10 @@ services:
   - docker
   -
 networks:
-  network: selenoid
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
 
 script:
   - docker-compose -f .stack/docker/docker-compose.yml up  --build --force-recreate
