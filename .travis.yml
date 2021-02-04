@@ -14,5 +14,5 @@ before_script:
 
   -
 script:
-  - docker-compose -f .stack/docker/docker-compose.yml up  --build --force-recreate
+  - docker-compose -f .stack/docker/docker-compose.yml up  -d --build --force-recreate
   - mvn clean test
