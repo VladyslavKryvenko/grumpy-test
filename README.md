@@ -1,11 +1,11 @@
 # Grumpy Test
 
-[Grumpy](https://github.com/tonsky/grumpy) is simple blog engine with minimal functionality.
+[Grumpy](https://github.com/tonsky/grumpy) is a simple blog engine with the minimal functionality.
 
-Tests is written on Java using TestNg and [Selenide](https://github.com/codeborne/selenide) as the wrapper on Selenium WebDriver.
+Tests are written on Java using TestNg [Selenide](https://github.com/codeborne/selenide) as the wrapper on Selenium WebDriver.
 They run in parallel in different browsers using [Selenoid](https://github.com/aerokube/selenoid) as implementation of Selenium hub.
-As status page is used [Selenoid UI](https://github.com/aerokube/selenoid-ui) as user interface for Selenoid.
-For reports is used the [Allure](https://github.com/allure-framework/allure2).
+[Selenoid UI](https://github.com/aerokube/selenoid-ui) is used as the status page and Selenoid enables to use user interface.
+[Allure](https://github.com/allure-framework/allure2) is used for the reports.
 
 ## Getting Started
 ### Build the application
