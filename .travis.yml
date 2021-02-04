@@ -6,14 +6,13 @@ services:
   - docker
 
 before_script:
-  - docker pull selenoid/vnc:chrome_86.0
-  - docker pull selenoid/vnc:firefox_82.0
-  - docker pull selenoid/vnc:opera_72.0
-  - docker pull browsers/edge:88.0
+  - docker pull selenoid/vnc:chrome_65.0
+  - docker pull selenoid/vnc:firefox_58.0
+  - docker pull selenoid/vnc:opera_51.0
   - docker pull browsers/safari:13.0
+  - docker pull browsers/edge:88.0
 
-
-
+  -
 script:
   - docker-compose -f .stack/docker/docker-compose.yml up  --build --force-recreate
   - mvn clean test
